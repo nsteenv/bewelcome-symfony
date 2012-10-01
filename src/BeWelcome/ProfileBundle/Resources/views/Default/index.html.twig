@@ -1,0 +1,24 @@
+<h1>{% trans %}bewelcome.members{% endtrans %} ({{ nbMembers }})</h1>
+
+	<form action="" method="post" {{ form_enctype(form) }}>
+		{{ form_label(form.userName) }}
+		{{ form_errors(form.userName) }}
+		{{ form_widget(form.userName) }}
+		
+	<input type="submit" />
+	</form>
+
+
+<table id="memebers_list">
+	<tr><th>User name</th><th>Status</th></tr>
+	{% for member in members %}
+		<tr>
+			<td><a href="details/{{ member.id }}">
+				{{ member.userName }}
+			</a></td>
+			<td>{{ member.status }}</td>
+		</tr>
+	{% else %}
+		<tr><td colspan='2'>No member fount</td></tr>
+	{% endfor %}
+</table>

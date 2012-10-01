@@ -25,3 +25,8 @@ _configurator:
 
 _main:
     resource: routing.yml
+
+_bewelcome:
+    resource: "@BeWelcomeProfileBundle/Controller/DefaultController.php"
+    type:     annotation
+    prefix:   /bewelcome/profile

@@ -1,0 +1,29 @@
+<h1>BeWelcome Member ({{ member.username }})</h1>
+
+<a href="../list">
+		Back to BeWelcome members list
+	</a>
+		
+
+<h2>Sent messages</h2>
+	<ul>
+		{% for message in member.sentMessages %}
+			<li>{{ message.message }}</li>
+		{% else %}
+			<li>No message sent.</li>
+		{% endfor %}
+	</ul>
+	<h3>Received messages</h3>
+	<ul>
+		{% for message in member.receivedMessages %}
+			<li>{{ message.message }}</li>
+			{% if message.whenFirstRead is null %}
+				<b>NOT READ</b>
+			{% else %}
+				Read
+			{% endif %}
+		{% else %}
+			<li>No message received.</li>
+		{% endfor %}
+	</ul>
+	</li>

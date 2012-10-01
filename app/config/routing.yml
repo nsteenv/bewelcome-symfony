@@ -1,3 +1,13 @@
+be_welcome_profile:
+    resource: "@BeWelcomeProfileBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+be_welcome_rox:
+    resource: "@BeWelcomeRoxBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 # Internal routing configuration to handle ESI
 #_internal:
 #    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
